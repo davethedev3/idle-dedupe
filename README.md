@@ -10,6 +10,13 @@ A notice is cut only when all of these hold:
 
 ## Install
 
-Function-hooks mods are an early-access Claude Code feature (written against 2.1.302). Load the folder with `claude --plugin-dir /path/to/idle-dedupe`, or list it in `CLAUDE_CODE_PLUGIN_DIRS` (colon-separated) to load it in every session. The engine writes the plugin API's type declarations to `.claude-plugin/types/` when it loads the mod; they are not part of this repo.
+From the [davesmods](https://github.com/davethedev3/davesmods) marketplace:
+
+```sh
+claude plugin marketplace add davethedev3/davesmods
+claude plugin install idle-dedupe@davesmods
+```
+
+Function-hooks mods are an early-access Claude Code feature (written against 2.1.302). To run from a checkout instead, load the folder with `claude --plugin-dir /path/to/idle-dedupe`, or list it in `CLAUDE_CODE_PLUGIN_DIRS` (colon-separated) to load it in every session. The engine writes the plugin API's type declarations to `.claude-plugin/types/` when it loads the mod; they are not part of this repo.
 
 Checks: `claude plugin validate .` and `claude plugin test .` from this folder. The `SendMessage` path can't be raised from the test kit, so it was verified with a live subagent.
