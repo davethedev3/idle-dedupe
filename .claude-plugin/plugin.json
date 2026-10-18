@@ -1,0 +1,1 @@
+{ "name": "idle-dedupe", "version": "0.1.0", "description": "Shortens a subagent's idle_notification when that agent already delivered its report by SendMessage or an earlier idle result.", "author": { "name": "davethedev3" }, "license": "MIT" }
